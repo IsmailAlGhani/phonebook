@@ -81,7 +81,6 @@ const PhonebookFormPage: FC<PhonebookFormPageType> = ({ edited }) => {
   const { first_name, last_name, phones = [] } = dataContact || {};
 
   const currentPhonesData = phones.map((item) => item.number);
-  const phonesID = phones.map((item) => item.id);
 
   const onFinish = async (values: ContactFormType) => {
     const { firstName, lastName, phones } = values.contact;
@@ -112,7 +111,7 @@ const PhonebookFormPage: FC<PhonebookFormPageType> = ({ edited }) => {
         };
         if (dataCompleteFinal.length) {
           await updateContact(parseInt(id || "0"), setData, dataPhone, () =>
-            navigate("/")
+            navigate(-1)
           );
         } else {
           notification.error({

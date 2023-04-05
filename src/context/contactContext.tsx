@@ -80,12 +80,13 @@ const ContactProvider: React.FC<Props> = ({ children }) => {
   const onAfterComplete = (dataComplete: Query_Root) => {
     const dataCompleteFinal = idx(dataComplete, (_) => _.contact) || [];
     const currentLength = dataCompleteFinal.length;
-    if (currentLength !== data.length) {
+    if (currentLength - param.offset === 10) {
       setLoadMore(true);
     } else {
       setLoadMore(false);
     }
     setData(dataCompleteFinal);
+    console.log("masuk");
   };
 
   const { networkStatus, refetch, fetchMore } = useQuery(LOAD_CONTACT_LIST, {
@@ -159,8 +160,8 @@ const ContactProvider: React.FC<Props> = ({ children }) => {
           } contact already created!`,
         });
         refetch({
-          offset: param.offset,
-          limit: param.limit,
+          offset: 0,
+          limit: 10,
           ...(param.firstName && {
             where: {
               ...(param.firstName && {
