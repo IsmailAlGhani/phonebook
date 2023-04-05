@@ -1,11 +1,12 @@
-import { FC, Fragment, ReactNode } from "react";
+import { FC, Fragment, lazy, ReactNode } from "react";
 import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
 import "antd/dist/reset.css";
-import PhonebookFormPage from "./Pages/PhonebookFormPage";
 import { Row, Col, Result, Typography, theme } from "antd";
-import RootPage from "./Pages/RootPage";
-import ContactDetailPage from "./Pages/ContactDetailPage";
 import ContactProvider from "./context/contactContext";
+
+const RootPage = lazy(() => import("./Pages/RootPage"));
+const PhonebookFormPage = lazy(() => import("./Pages/PhonebookFormPage"));
+const ContactDetailPage = lazy(() => import("./Pages/ContactDetailPage"));
 
 const { Text, Title } = Typography;
 
