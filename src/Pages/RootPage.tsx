@@ -9,7 +9,7 @@ import {
   Typography,
   Avatar,
 } from "antd";
-import { FC, useContext, useState } from "react";
+import { FC, useContext } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { UserOutlined, AntDesignOutlined } from "@ant-design/icons";
 import { ContactContext, ContactContextType } from "../context/contactContext";

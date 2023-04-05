@@ -1,16 +1,12 @@
 import { gql, TypedDocumentNode } from "@apollo/client";
 import {
   Contact_Set_Input,
-  InputMaybe,
   Mutation_Root,
   Mutation_RootDelete_Contact_By_PkArgs,
   Mutation_RootDelete_PhoneArgs,
-  Mutation_RootDelete_Phone_By_PkArgs,
   Mutation_RootInsert_PhoneArgs,
   Phone_Bool_Exp,
   Phone_Insert_Input,
-  Phone_Pk_Columns_Input,
-  Phone_Set_Input,
 } from "../generated/graphql";
 
 export const MUTATION_DELETE_CONTACT: TypedDocumentNode<

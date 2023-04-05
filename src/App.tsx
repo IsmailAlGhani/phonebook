@@ -1,5 +1,5 @@
 import { FC, Fragment, ReactNode } from "react";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
 import "antd/dist/reset.css";
 import PhonebookFormPage from "./Pages/PhonebookFormPage";
 import { Row, Col, Result, Typography, theme } from "antd";
@@ -66,7 +66,7 @@ const PhonebookLayout: FC<PhonebookLayoutType> = (props) => {
   );
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootPage />,

@@ -12,7 +12,6 @@ import {
   MUTATION_ADD_PHONE,
   MUTATION_CREATE_CONTACT,
   MUTATION_DELETE_CONTACT,
-  MUTATION_DELETE_PHONE,
   MUTATION_UPDATE_CONTACT,
 } from "../Graphql/Mutation";
 import { LOAD_CONTACT_LIST } from "../Graphql/Queries";
