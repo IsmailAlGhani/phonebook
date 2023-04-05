@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
+    "prod": "webpack --mode production --env production",
     "compile": "graphql-codegen --config codegen.ts",
     "watch": "graphql-codegen -w"
   },
