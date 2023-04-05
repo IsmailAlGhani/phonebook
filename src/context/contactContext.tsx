@@ -86,7 +86,6 @@ const ContactProvider: React.FC<Props> = ({ children }) => {
       setLoadMore(false);
     }
     setData(dataCompleteFinal);
-    console.log("masuk");
   };
 
   const { networkStatus, refetch, fetchMore } = useQuery(LOAD_CONTACT_LIST, {
