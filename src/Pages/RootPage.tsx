@@ -31,15 +31,7 @@ const RootPage: FC = () => {
   return (
     <Spin spinning={isLoading}>
       <Layout style={{ height: "100vh" }}>
-        <Sider
-          theme="light"
-          breakpoint="lg"
-          collapsedWidth="0"
-          style={{
-            height: "100%",
-            overflow: "auto",
-          }}
-        >
+        <Sider theme="light" breakpoint="lg" collapsedWidth="0">
           <Row justify={"center"}>
             <Col
               style={{
@@ -51,7 +43,7 @@ const RootPage: FC = () => {
               onClick={onTapLogo}
             >
               <Avatar
-                size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
+                size={{ xs: 40, sm: 40, md: 40, lg: 64, xl: 80, xxl: 100 }}
                 icon={<AntDesignOutlined />}
                 style={{ marginTop: 16 }}
               />
@@ -63,7 +55,7 @@ const RootPage: FC = () => {
               placeholder="input search contact name"
               allowClear
               onSearch={onSearch}
-              style={{ width: "65%" }}
+              style={{ width: "70%" }}
             />
             <Link to={"new"}>
               <Button type="primary">Add</Button>
@@ -82,6 +74,10 @@ const RootPage: FC = () => {
                 </Link>
               ),
             }))}
+            style={{
+              height: "55%",
+              overflow: "auto",
+            }}
           />
           {loadMore ? (
             <Row justify={"center"}>
